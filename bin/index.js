@@ -25,6 +25,19 @@ class Form {
             this.open();
         }
     }
+    /**
+     * #### (static) open
+     * @returns {Form} Form class object
+     */
+    static open() {
+        const f_ = new this();
+        f_.open();
+        return f_;
+    }
+    /**
+     * ####  open
+     * @returns {Form} Form class object
+     */
     open() {
         this.vfm_ = document.querySelector("v-form[name=\"" + this.name + "\"]");
         if (!this.vfm_) {
